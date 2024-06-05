@@ -117,9 +117,10 @@
 
 .capitulos-container{
   width: 100%;
-  height: auto;
+  height: 40rem;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   background-image: url(../assets/caps-img.jpg);
   background-size: cover;
@@ -135,21 +136,35 @@
 }
 
 .capitulos-grid-container{
-  width: 100%;
-  height: auto;
   margin-top: 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 2rem;
+  gap: 8rem;
 
 }
 
 .capitulo{
   width: 18rem;
   height: 10rem;
-  background-color: #1C1C1C;
+  position: relative; 
+  display: inline-block;
 }
+
 
 .capitulo img{
   width: 100%;
+  height: auto; 
+  z-index: -1;
+  filter: brightness(50%);
+}
+
+.cap-title{
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -130%); 
+  padding: 10px;
+  color: var(--color-text);
+  font-family: var(--Kanit-font);
+  font-size: 1.5rem; 
 }
